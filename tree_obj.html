@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/AltspaceVR/aframe-altspace-component/v1.4.0/dist/aframe-altspace-component.min.js"></script>
+<script>
+
+// an example custom component, that will change the color when clicked
+AFRAME.registerComponent('color-cycle', {
+    schema: {},
+    init: function(){
+        var self = this;
+        self.el.object3D.addEventListener('cursorup', function(){
+            var rgb = [
+                Math.floor(Math.random()*256),
+                Math.floor(Math.random()*256),
+                Math.floor(Math.random()*256)
+            ];
+            self.el.setAttribute('color', 'rgb('+rgb.join(',')+')');
+        });
+    }
+});
+
+</script>
+</head>
+<body>
+
+<!-- set up the scene -->
+<a-scene altspace='vertical-align: bottom;'>
+    <a-box position='0 1 0' color-cycle></a-box>
+    
+    
+     <a-assets>
+    <a-asset-item id="tree-obj" src="assets/tree.obj"></a-asset-item>
+    <a-asset-item id="tree-mtl" src="assets/tree.mtl"></a-asset-item>
+  </a-assets>
+  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+
+</a-scene>
+
+</body></html>

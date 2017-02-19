@@ -1,0 +1,63 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _Metal_Corrugated_Shiny_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.752941 0.752941 0.752941
+Ks 0.330000 0.330000 0.330000
+map_Kd chair/_Metal_Corrugated_Shiny_1.jpg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Leather_Dark_Brown_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.330000 0.330000 0.330000
+map_Kd chair/_Leather_Dark_Brown_1.jpg
+
+newmtl Metal_Corrugated_Shiny
+Ka 0.000000 0.000000 0.000000
+Kd 0.752941 0.752941 0.752941
+Ks 0.330000 0.330000 0.330000
+map_Kd chair/Metal_Corrugated_Shiny.jpg
+
+newmtl _Leather_Dark_Brown_2
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.330000 0.330000 0.330000
+map_Kd chair/_Leather_Dark_Brown_2.jpg
+
+newmtl _Leather_Dark_Brown_6
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.330000 0.330000 0.330000
+map_Kd chair/_Leather_Dark_Brown_6.jpg
+
+newmtl _Leather_Dark_Brown_4
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.330000 0.330000 0.330000
+map_Kd chair/_Leather_Dark_Brown_4.jpg
+
+newmtl _Leather_Dark_Brown_3
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.330000 0.330000 0.330000
+map_Kd chair/_Leather_Dark_Brown_3.jpg
+
+newmtl _Leather_Dark_Brown_5
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.330000 0.330000 0.330000
+map_Kd chair/_Leather_Dark_Brown_5.jpg
+
+newmtl frigerio_davi1
+Ka 0.000000 0.000000 0.000000
+Kd 0.317647 0.309804 0.301961
+Ks 0.330000 0.330000 0.330000
+map_Kd chair/frigerio_davi1.jpg
+

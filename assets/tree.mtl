@@ -1,0 +1,34 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl m15
+Ka 0.000000 0.000000 0.000000
+Kd 0.647059 0.678431 0.682353
+Ks 0.330000 0.330000 0.330000
+map_Kd tree/m15.jpg
+
+newmtl Stupid_bark
+Ka 0.000000 0.000000 0.000000
+Kd 0.521569 0.419608 0.196078
+Ks 0.330000 0.330000 0.330000
+map_Kd tree/Stupid_bark.png
+
+newmtl mat1
+Ka 0.000000 0.000000 0.000000
+Kd 0.164706 0.290196 0.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd tree/mat1.jpg
+
+newmtl _27
+Ka 0.000000 0.000000 0.000000
+Kd 0.419608 0.431373 0.207843
+Ks 0.330000 0.330000 0.330000
+map_Kd tree/_27.png
+
+newmtl BlackMatte
+Ka 0.000000 0.000000 0.000000
+Kd 0.090196 0.180392 0.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd tree/BlackMatte.jpg
+
