@@ -7,16 +7,14 @@
 <body>
 
 <!-- set up the scene -->
-<a-scene altspace='vertical-align: bottom;'>
+<a-scene altspace="fullspace: true" scale="10 10 10" sync-system="author: altspacevr; app: landscape; refUrl: https://admintoolsaltspace.firebaseio.com/">
      
     <a-assets>
         <a-asset-item id="tree" src="assets/tree.dae"></a-asset-item>
-        <a-asset-item id="helloworld" src="assets/helloworld.dae"></a-asset-item>
 
     </a-assets>
     
-    <a-entity collada-model="#tree" position="0 0 0"></a-entity>
-    <a-entity collada-model="#helloworld" position="1 1 1"></a-entity>
+    <a-entity collada-model="#tree" position="0 0 0" altspace-cursor-collider="enabled: false" n-mesh-collider="type: environment; convex: false"></a-entity>
 
 
 </a-scene>
