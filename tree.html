@@ -1,66 +1,4 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>AltspaceVR</title>
-    <meta name="description" content="Table Tennis AltspaceVR">
-    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/AltspaceVR/aframe-altspace-component/v1.4.0/dist/aframe-altspace-component.min.js"></script>
-    <script src="http://sdk.altvr.com/libs/altspace.js/0.28.1/altspace.min.js"></script>
-    <script>THREE.PositionalAudio = THREE.Audio</script>
-    <style type="text/css">
-        .a-enter-vr{
-          display:none;
-        }
-    </style>
-  </head>
-  
-  <body>
-    <a-scene altspace="fullspace: true" scale="10 10 10" sync-system="author: altspacevr; app: landscape; refUrl: https://admintoolsaltspace.firebaseio.com/">
-      <a-assets>
-        <a-asset-item id="tree-collada" src="assets/tree.dae"></a-asset-item>
-        <a-asset-item id="stone-collada" src="assets/tree.dae"></a-asset-item>
-      </a-assets>
-
-      <!-- LEVEL 3D -->
-      <a-entity id="cl-a" position="0 0 0" rotation="0 260 0" scale="1 1 1" collada-model="#tree-collada" altspace-cursor-collider="enabled: false" n-mesh-collider="type: environment; convex: false">
-      </a-entity>
-
-      <a-entity id="cl-a" position="2 0 2" rotation="0 180 0" scale="0.75 0.75 0.75" collada-model="#stone-collada" altspace-cursor-collider="enabled: false" n-mesh-collider="type: environment; convex: false">
-      </a-entity>
- 
-      <a-entity
-        position="-0.535 -0.59 -1.275"
-        scale="0.2 0.2 0.2"
-        rotation="-30 0 0"
-        n-text="fontSize: 2; text: CampFire SDK v0.2.5"
-        n-cockpit-parent>
-      </a-entity>
-     
-    </a-scene>
-
-    <!-- Sørger for at jeg kan bruge et 3D Objekt som Collision -->
-    <script>
-      var mesh = document.querySelector('#cl-a');
-      mesh.addEventListener('model-loaded', function() {
-        var meshy = document.querySelector('#cl-a');
-        var object = meshy.object3D;
-        console.log(object);
-        if(object != undefined && object.children != undefined && object.children.length && object.children[0].children != undefined && object.children[0].children.length){
-          for(var i = 0; i < object.children[0].children.length; i++){
-            var child_mesh = object.children[0].children[i];
-            if(child_mesh.children != undefined && child_mesh.children.length){
-              child_mesh.children[0].material.visible = false;
-              console.log("Hiding Mesh");
-            }
-          }
-        }
-      });
-    </script>
-  </body>
-</html>
-
 <html><head>
 <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/AltspaceVR/aframe-altspace-component/v1.4.0/dist/aframe-altspace-component.min.js"></script>
@@ -69,14 +7,16 @@
 <body>
 
 <!-- set up the scene -->
-<a-scene altspace="fullspace: true" scale="10 10 10" sync-system="author: altspacevr; app: landscape; refUrl: https://admintoolsaltspace.firebaseio.com/">
+<a-scene altspace='vertical-align: bottom;'>
      
     <a-assets>
         <a-asset-item id="tree" src="assets/tree.dae"></a-asset-item>
+        <a-asset-item id="helloworld" src="assets/helloworld.dae"></a-asset-item>
 
     </a-assets>
     
-    <a-entity collada-model="#tree" position="7 0 0" altspace-cursor-collider="enabled: false" n-mesh-collider="type: environment; convex: false"></a-entity>
+    <a-entity collada-model="#tree" position="0 0 0"></a-entity>
+    <a-entity collada-model="#helloworld" position="1 1 1"></a-entity>
 
 
 </a-scene>
