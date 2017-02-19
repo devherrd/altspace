@@ -5,13 +5,12 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.78.0 commit date:2017-02-08, commit time:13:50, hash:3c04373</authoring_tool>
     </contributor>
-    <created>2017-02-19T18:24:27</created>
-    <modified>2017-02-19T18:24:27</modified>
+    <created>2017-02-19T18:44:43</created>
+    <modified>2017-02-19T18:44:43</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_images/>
-  <library_controllers/>
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene"/>
   </library_visual_scenes>
