@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AltspaceVR</title>
+    <meta name="description" content="Table Tennis AltspaceVR">
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/AltspaceVR/aframe-altspace-component/v1.4.0/dist/aframe-altspace-component.min.js"></script>
+    <script src="http://sdk.altvr.com/libs/altspace.js/0.28.1/altspace.min.js"></script>
+    <script>THREE.PositionalAudio = THREE.Audio</script>
+    <style type="text/css">
+        .a-enter-vr{
+          display:none;
+        }
+    </style>
+  </head>
+  
+  <body>
+    <a-scene altspace="fullspace: true" scale="10 10 10" sync-system="author: altspacevr; app: landscape; refUrl: https://admintoolsaltspace.firebaseio.com/">
+      <a-assets>
+        <a-asset-item id="helloworld" src="assets/helloworld.dae"></a-asset-item>
+      </a-assets>
+
+      <!-- LEVEL 3D -->
+      <a-entity id="cl-a" position="0 0 0" rotation="0 0 0" scale="1 1 1" collada-model="#helloworld" altspace-cursor-collider="enabled: false" n-mesh-collider="type: environment; convex: false">
+      </a-entity>
+    </a-scene>
+
+    <!-- Sørger for at jeg kan bruge et 3D Objekt som Collision -->
+    <script>
+      var mesh = document.querySelector('#cl-a');
+      mesh.addEventListener('model-loaded', function() {
+        var meshy = document.querySelector('#cl-a');
+        var object = meshy.object3D;
+        console.log(object);
+        if(object != undefined && object.children != undefined && object.children.length && object.children[0].children != undefined && object.children[0].children.length){
+          for(var i = 0; i < object.children[0].children.length; i++){
+            var child_mesh = object.children[0].children[i];
+            if(child_mesh.children != undefined && child_mesh.children.length){
+              child_mesh.children[0].material.visible = false;
+              console.log("Hiding Mesh");
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
