@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/AltspaceVR/aframe-altspace-component/v1.4.0/dist/aframe-altspace-component.min.js"></script>
+
+</head>
+<body>
+
+<!-- set up the scene -->
+<a-scene altspace='vertical-align: bottom;'>
+     <a-assets>
+    <a-asset-item id="tree-obj" src="assets/lara.obj"></a-asset-item>
+    <a-asset-item id="tree-mtl" src="assets/lara.mtl"></a-asset-item>
+  </a-assets>
+  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+
+</a-scene>
+
+</body></html>
